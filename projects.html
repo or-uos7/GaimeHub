@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css?2021">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.css"
+        integrity="sha512-n5zPz6LZB0QV1eraRj4OOxRbsV7a12eAGfFcrJ4bBFxxAwwYDp542z5M0w24tKPEhKk2QzjjIpR5hpOjJtGGoA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>GaimeHub</title>
+    <style>
+        /* 간단한 스타일링 */
+        #filterSelect,
+        #searchInput {
+            margin-bottom: 10px;
+        }
+
+        .listItem {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="topbar1">
+        <div id="logo" onclick="window.location.reload()">
+            <div id="logo_div">
+                <img src="./img/github.png" id="logoimg" height="32px">
+            </div>
+            <div id="garomenu">
+                <ul>
+                    <li class="dropdown">
+                        <div class="dropdown-menu">Product</div>
+                        <div class="dropdown-content">
+                            <a href="#">Hello</a>
+                            <a href="#">Hello</a>
+                            <a href="#">Hello</a>
+                            <a href="#">Hello</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown-menu">Solutions</div>
+                        <div class="dropdown-content">
+                            <a href="#">Hello</a>
+                            <a href="#">Hello</a>
+                            <a href="#">Hello</a>
+                            <a href="#">Hello</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown-menu">Open Source</div>
+                        <div class="dropdown-content">
+                            <a href="#">Hello</a>
+                            <a href="#">Hello</a>
+                            <a href="#">Hello</a>
+                            <a href="#">Hello</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown-menu">Pricing</div>
+                        <div class="dropdown-content">
+                            <a href="#">Hello</a>
+                            <a href="#">Hello</a>
+                            <a href="#">Hello</a>
+                            <a href="#">Hello</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="function">
+            <div id="search">
+                <img src="" alt="">
+                <img src="" alt="">
+                <div>
+                </div>
+            </div>
+            <p id="gubunsun">|</p>
+            <div class="but">
+                a
+            </div>
+            <div class="but">
+                b
+            </div>
+            <div class="but" style="margin-right: 15px;">
+                c
+            </div>
+        </div>
+    </div>
+    <div id="topbar1_5"></div>
+    <div id="topbar2">
+        <div>
+            <div id="name">
+                <img src="./img/githubborder.png" height="30px" style="border:0.5px solid black; border-radius:100px;">
+                <p>
+                    tjddnd0
+                </p>
+                <button>
+                    Follow
+                </button>
+            </div>
+            <div id="barogagigroup">
+                <div class="barogagi" onclick="location.href='./index.html'">
+                    A. Overview
+                </div>
+                <div class="barogagi" id="barogagithis">
+                    C. Projects
+                </div>
+                <div class="barogagi" onclick="location.href='./more.html'">
+                    D. more
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div id="innercontent1">
+            <img src="img/githubborder.png" id="mainimg">
+            <div>
+                <p id="profilename">조성웅</p>
+                <p id="profileid">GAIME</p>
+                <button id="follow">Follow</button>
+                <p id="profileintroduce">도구를 잘 활용하는 개발자</p>
+                <div id="korea">
+                    <svg class="octicon octicon-location" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                        aria-hidden="true">
+                        <path
+                            d="m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193 6.5 6.5 0 0 1 0 9.193Zm-1.06-8.132v-.001a5 5 0 1 0-7.072 7.072L8 14.07l3.536-3.534a5 5 0 0 0 0-7.072ZM8 9a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 9Z">
+                        </path>
+                    </svg>
+                    <p id="koreatext">Republic of Korea</p>
+                </div>
+                <div id="korea">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                        data-view-component="true" class="octicon octicon-link">
+                        <path
+                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                        </path>
+                    </svg>
+                    <a href="https://github.com/tjddnd0" id="linktext">https://github.com/tjddnd0</a>
+                </div>
+
+            </div>
+        </div>
+        <div id="innercontent2">
+            <div style="padding: 0px;border: 0px;">
+                <div id="search_area">
+                    <input type="text" id="searchInput" placeholder="Find a repository...">
+                    <select id="filterSelect">
+                        <option value="all">전체</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="php">PHP</option>
+                    </select>
+                </div>
+                <div>
+                    <div id="itemList">
+                        <hr>
+                        <div class="listItem" data-attributes="html css">
+                            <div>
+                                <div>
+                                    <a href="" class="listItemName">
+                                        아이템 1
+                                    </a>
+                                    <p class="listItemScript">
+                                        아이템입니다.
+                                    </p>
+                                    <p class="listItemYear">
+                                        2023
+                                    </p>
+                                </div>
+                                <div>
+                                    b
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="listItem" data-attributes="html css">
+                            <div>
+                                <div>
+                                    <a href="" class="listItemName">
+                                        아이템 2
+                                    </a>
+                                    <p class="listItemScript">
+                                        아이템입니다.
+                                    </p>
+                                    <p class="listItemYear">
+                                        2023
+                                    </p>
+                                </div>
+                                <div>
+                                    b
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="listItem" data-attributes="html css">
+                            <div>
+                                <div>
+                                    <a href="" class="listItemName">
+                                        아이템 3
+                                    </a>
+                                    <p class="listItemScript">
+                                        아이템입니다.
+                                    </p>
+                                    <p class="listItemYear">
+                                        2023
+                                    </p>
+                                </div>
+                                <div>
+                                    b
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="listItem" data-attributes="html css">
+                            <div>
+                                <div>
+                                    <a href="" class="listItemName">
+                                        아이템 4
+                                    </a>
+                                    <p class="listItemScript">
+                                        아이템입니다.
+                                    </p>
+                                    <p class="listItemYear">
+                                        2023
+                                    </p>
+                                </div>
+                                <div>
+                                    b
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="listItem" data-attributes="html css">
+                            <div>
+                                <div>
+                                    <a href="" class="listItemName">
+                                        아이템 5
+                                    </a>
+                                    <p class="listItemScript">
+                                        아이템입니다.
+                                    </p>
+                                    <p class="listItemYear">
+                                        2023
+                                    </p>
+                                </div>
+                                <div>
+                                    b
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="listItem" data-attributes="html css">
+                            <div>
+                                <div>
+                                    <a href="" class="listItemName">
+                                        아이템 6
+                                    </a>
+                                    <p class="listItemScript">
+                                        아이템입니다.
+                                    </p>
+                                    <p class="listItemYear">
+                                        2023
+                                    </p>
+                                </div>
+                                <div>
+                                    b
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottombar">
+        <div>
+            <img src="./img/githubb.png" width="25px">
+            <p class="bottombar_p">© 2023 GaimeHub, Inc.</p>
+            <a href="" class="bottombar_a">Terms</a>
+            <a href="" class="bottombar_a">Privacy</a>
+            <a href="" class="bottombar_a">Security</a>
+            <a href="" class="bottombar_a">Status</a>
+            <a href="" class="bottombar_a">Docs</a>
+            <a href="" class="bottombar_a">Contact</a>
+            <a href="" class="bottombar_a">Manage cookies</a>
+            <a href="" class="bottombar_a">Do not share my personal information</a>
+        </div>
+    </div>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <script>
+        document.getElementById('filterSelect').addEventListener('change', filterItems);
+        document.getElementById('searchInput').addEventListener('input', function () {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(filterItems, 100);
+        });
+
+        let timeoutId;
+
+        function filterItems() {
+            const selectedAttribute = document.getElementById('filterSelect').value;
+            const searchInput = document.getElementById('searchInput').value.trim().toLowerCase().replace(/\s/g, '');
+            const items = document.getElementsByClassName('listItem');
+
+            for (let i = 0; i < items.length; i++) {
+                const itemAttributes = items[i].dataset.attributes.split(' ');
+                const itemText = items[i].textContent.trim().toLowerCase().replace(/\s/g, '');
+
+                // 선택한 속성이 "전체"이거나 현재 아이템이 선택한 속성을 가지고 있으면서
+                // 검색어와 일치하는 부분이 있으면 보이게, 아니면 숨기기
+                if ((selectedAttribute === 'all' || itemAttributes.includes(selectedAttribute)) &&
+                    itemText.includes(searchInput)) {
+                    items[i].style.display = 'block';
+                } else {
+                    items[i].style.display = 'none';
+                }
+            }
+        }
+
+        namediv = document.getElementById('name');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                var targetImage = document.getElementById("mainimg");
+                var boundingBox = targetImage.getBoundingClientRect();
+
+                // 이미지가 화면에 보이지 않으면
+                if (boundingBox.top > window.innerHeight || boundingBox.bottom < 0) {
+                    namediv.style.opacity = 1;
+                    console.log("Image is not visible on the screen!");
+                } else {
+                    namediv.style.opacity = 0;
+                }
+            });
+        });
+
+        window.onload = function () {
+            scrollToTop()
+        }
+
+        var timeOut;
+
+        function scrollToTop() {
+            if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0) {
+                window.scrollBy(0, -50);
+                timeOut = setTimeout('scrollToTop()', 10);
+            } else clearTimeout(timeOut);
+        }
+    </script>
+</body>
+
+</html>

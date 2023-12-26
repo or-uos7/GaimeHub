@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 및 다중 속성별 목록 필터링</title>
+    <style>
+        /* 간단한 스타일링 */
+        #filterSelect,
+        #searchInput {
+            margin-bottom: 10px;
+        }
+
+        .listItem {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="filterSelect">속성 선택:</label>
+    <select id="filterSelect">
+        <option value="all">전체</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="php">PHP</option>
+        <!-- 다른 속성을 필요에 맞게 추가할 수 있습니다. -->
+    </select>
+
+    <br>
+
+    <label for="searchInput">검색어:</label>
+    <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+
+    <ul id="itemList">
+        <li class="listItem" data-attributes="html css">아이템 1</li>
+        <li class="listItem" data-attributes="css">아이템 2</li>
+        <li class="listItem" data-attributes="php">아이템 3</li>
+        <!-- 다른 속성에 해당하는 목록 아이템을 추가할 수 있습니다. -->
+    </ul>
+
+    <script>
+        document.getElementById('filterSelect').addEventListener('change', filterItems);
+        document.getElementById('searchInput').addEventListener('input', function () {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(filterItems, 100);
+        });
+
+        let timeoutId;
+
+        function filterItems() {
+            const selectedAttribute = document.getElementById('filterSelect').value;
+            const searchInput = document.getElementById('searchInput').value.trim().toLowerCase().replace(/\s/g, '');
+            const items = document.getElementsByClassName('listItem');
+
+            for (let i = 0; i < items.length; i++) {
+                const itemAttributes = items[i].dataset.attributes.split(' ');
+                const itemText = items[i].textContent.trim().toLowerCase().replace(/\s/g, '');
+
+                // 선택한 속성이 "전체"이거나 현재 아이템이 선택한 속성을 가지고 있으면서
+                // 검색어와 일치하는 부분이 있으면 보이게, 아니면 숨기기
+                if ((selectedAttribute === 'all' || itemAttributes.includes(selectedAttribute)) &&
+                    itemText.includes(searchInput)) {
+                    items[i].style.display = 'block';
+                } else {
+                    items[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
