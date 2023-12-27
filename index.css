@@ -692,6 +692,7 @@ body {
 }
 
 .listItemName {
+    font-weight: 600;
     font-size: 30px;
     text-decoration-line: none;
     color: #0969da;
