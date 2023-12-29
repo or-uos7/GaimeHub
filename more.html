@@ -9,7 +9,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.css"
         integrity="sha512-n5zPz6LZB0QV1eraRj4OOxRbsV7a12eAGfFcrJ4bBFxxAwwYDp542z5M0w24tKPEhKk2QzjjIpR5hpOjJtGGoA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>GaimeHub</title>
+    <title>G¡tHμb</title>
     <style>
         #innercontent2>div {
             width: 100%;
@@ -23,22 +23,7 @@
             gap: 20px;
         }
 
-        #innercontent2>div div {
-            display: flex;
-            align-items: center !important;
-            justify-content: center !important;
-            background-color: rgb(250, 194, 12);
-            background-size: cover;
-            background-position: center center;
-        }
-
-        #innercontent2>div div:hover {
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-        }
-
         #innercontent2>div div:nth-of-type(1) {
-            grid-area: 1;
             background-image: url(./img/meimg/1.jpg);
         }
 
@@ -47,50 +32,52 @@
         }
 
         #innercontent2>div div:nth-of-type(3) {
-            grid-area: 1;
-            background-image: url(./img/meimg/3.jpg);
+            background-image: url(./img/meimg/3.png);
         }
 
         #innercontent2>div div:nth-of-type(4) {
-            background-image: url(./img/meimg/4.jpg);
+            background-image: url(./img/meimg/4.png);
         }
 
         #innercontent2>div div:nth-of-type(5) {
-            grid-area: 1;
-            background-image: url(./img/meimg/5.jpg);
+            background-image: url(./img/meimg/5.png);
         }
 
         #innercontent2>div div:nth-of-type(6) {
-            background-image: url(./img/meimg/6.jpg);
+            background-image: url(./img/meimg/6.png);
+        }
+
+        #innercontent2>div div:nth-of-type(7) {
+            background-image: url(./img/meimg/7.png);
+        }
+
+        #innercontent2>div div:nth-of-type(8) {
+            background-image: url(./img/meimg/8.png);
+        }
+
+        #innercontent2>div div:nth-of-type(9) {
+            background-image: url(./img/meimg/9.png);
         }
 
         .container {
             position: relative;
             transition: all 0.2s;
             border-radius: 7px;
-            z-index: 998;
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            background-color: #202020;
+            background-size: cover;
+            background-position: center center;
         }
 
         .container:hover {
             transform: scale(2);
-            z-index: 999;
-            cursor: none;
-        }
-
-        .overlay {
-            position: absolute;
-            width: 220px;
-            height: 310px;
-            background: linear-gradient(105deg,
-                    transparent 40%,
-                    rgba(255, 219, 112, 0.8) 45%,
-                    rgba(132, 50, 255, 0.6) 50%,
-                    transparent 54%);
-            filter: brightness(1.1) opacity(0.8);
-            mix-blend-mode: color-dodge;
-            background-size: 150% 150%;
-            background-position: 100%;
-            transition: all 0.1s;
+            cursor: crosshair;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            border-radius: 0px;
+            z-index: 1000;
         }
     </style>
 </head>
@@ -233,7 +220,7 @@
     <div id="bottombar">
         <div>
             <img src="./img/githubb.png" width="25px">
-            <p class="bottombar_p">© 2023 GaimeHub, Inc.</p>
+            <p class="bottombar_p">© 2023 G¡tHμb, Inc.</p>
             <a href="" class="bottombar_a">Terms</a>
             <a href="" class="bottombar_a">Privacy</a>
             <a href="" class="bottombar_a">Security</a>
@@ -246,6 +233,29 @@
     </div>
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <script>
+        const topbar = document.getElementById('topbar2');
+        let isSticky = false;
+
+        window.addEventListener('scroll', () => {
+            const bodyRect = document.body.getBoundingClientRect();
+            const stickyRect = topbar.getBoundingClientRect();
+
+            // 윗부분이 바디의 윗부분과 닿았을 때
+            if (stickyRect.top <= bodyRect.top) {
+                if (!isSticky) {
+                    topbar.style.sticdfisjjfdkjdfklj = '10';
+                    console.log('ddd');
+                    isSticky = true;
+                }
+            } else {
+                if (isSticky) {
+                    // .sticky-element가 상단에서 벗어났을 때 실행할 코드
+                    topbar.style.zIndex = '1000';
+                    isSticky = false;
+                }
+            }
+        });
+
         namediv = document.getElementById('name');
 
         document.addEventListener("DOMContentLoaded", function () {
